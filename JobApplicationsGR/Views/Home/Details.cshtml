@@ -1,0 +1,72 @@
+﻿@model JobApplicationsGR.Models.ViewModels.JobsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div>
+    <h4>Details of @Html.DisplayFor(model => model.JobTitle)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.JobTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateApplied)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateApplied)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Source)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Source)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyAppliedTo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompanyAppliedTo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HaveTheyContactedMe)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HaveTheyContactedMe)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Skills)
+        </dt>
+
+        <dd>
+            <textarea asp-for="Skills" class="form-control" cols="20" rows="10" />
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URL)
+        </dt>
+
+        <dd>
+            @Html.TextBoxFor(model => model.URL)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>
